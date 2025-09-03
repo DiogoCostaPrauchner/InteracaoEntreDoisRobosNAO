@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+#Formato:
+#Comentário
+#Código
+
 import time
 from naoqi import ALProxy
 
@@ -7,11 +11,13 @@ RA_IP = "192.168.0.125" #IP Do robô A
 RB_IP = "192.168.0.152" #IP Do robô B
 PORT = 9559             #Porta utilizada pelos dois robôs
 
+#Mensagens utilizadas pelos robôs nas conversas
 mensagemsRA = ["Eu sou o Robô 1!", "Como você está hoje, Robô 2?", "Eu também! Ótimo dia hoje, não é mesmo?",
                "Sejam Bem-Vindos..."]
 mensagemsRB = ["E eu sou o Robô 2!", "Eu estou ótimo, e você, Robô 1?", "Sim! O sol está lindo!",
               "Ao Espaço Mais Inovação..."]
 
+#Inicialização dos contadores utilizados para a lógica de conversa
 cont1 = 0
 cont2 = 0
 contEnd = 0
@@ -21,8 +27,9 @@ ttsA_r1 = ALProxy("ALAnimatedSpeech", RA_IP, PORT)
 #ttsA_r2 = ALProxy("ALAnimatedSpeech", RB_IP, PORT)
 config = {"bodyLanguageMode": "contextual"}
 
-#Substituido por ttsA_rx, que é funciona da mesma maneira que o bloco "Animated Say" do Choregraphe
+#Substituido por ttsA_rx, que funciona da mesma maneira que o bloco "Animated Say" do Choregraphe
 #Manter no código caso seja necessário no futuro
+#Robô 2 ainda utiliza tts normal pois está com problemas nas articulações/engrenagens
 #tts_r1 = ALProxy("ALTextToSpeech", RA_IP, PORT)
 tts_r2 = ALProxy("ALTextToSpeech", RB_IP, PORT)
 
@@ -30,6 +37,7 @@ tts_r2 = ALProxy("ALTextToSpeech", RB_IP, PORT)
 mem_r1 = ALProxy("ALMemory", RA_IP, PORT)
 mem_r2 = ALProxy("ALMemory", RB_IP, PORT)
 
+#Inicialização para garantir que o código funciona
 mem_r1.insertData("Robo1Fala", "Eu sou o robô 1!")
 mem_r2.insertData("Robo2Fala", "Eu sou o robô 2!")
 
@@ -55,11 +63,11 @@ def main():
                 cont2 = (cont2 + 1) % len(mensagemsRB)
                 mem_r1.raiseEvent("Robo1Fala", mensagemsRA[cont1])
                 contEnd += 1
-                print(str(contEnd) + "Valor de contEnd")
+                print("Valor de contEnd: " + str(contEnd))
 
             if contEnd >= 8:
                 ttsA_r1.post.say("Da Unijuí!", config)
-                time.sleep(0.07)
+                time.sleep(0.05)
                 tts_r2.post.say("Da Unijuí!")
                 print("Conversa encerrada!")
                 break
