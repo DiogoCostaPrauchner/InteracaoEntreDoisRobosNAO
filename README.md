@@ -4,17 +4,19 @@
  
  Desenvolvido usando Choregraphe para criar arquivos *behavior* (.xar) que serão instalados dentro dos robôs, e a edição comunitária de PyCharm para o desenvolvimento do script.
 
- ## Como utilizar
+## Como utilizar
 
- Primeiramente, é necessário instalar Python 2.7.9, pois é a versão que a API NAOqi utiliza
+ Primeiramente, é necessário instalar Python 2.7.9, pois é a versão que a API NAOqi utiliza.
  
- Além disso, também é necessário instalar o SDK Python do site oficial da Aldebaran, o projeto foi desenvolvido utilizando a SDK 2.8.6 para Windows
+ Além disso, também é necessário instalar o SDK Python do site oficial da Aldebaran, o projeto foi desenvolvido utilizando a SDK 2.8.6 para Windows.
 
- Após ter descompactado a pasta do SDK Python no disco C: é necessário configurar as váriaveis de ambiente Path e PYTHONPATH na máquina onde será executado o script
+ Após ter descompactado a pasta do SDK Python no disco *C:*, é necessário configurar as váriaveis de ambiente Path e PYTHONPATH na máquina onde será executado o script.
 
- Path deve apontar para a pasta do Python 2.7.9, e PYTHONPATH deve apontar para a pasta *lib* do SDK
+ Para configurar as váriaveis de ambiente, é apenas pesquisar *Váriaveis de ambiente* após apertar o botão do Windows no teclado e clicar no programa com o mesmo nome.
 
-Com isso feito, é apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal (Para rodar no terminal é necessario utilizar o comando *python interacaoNao.py*)
+ Path deve apontar para a pasta do Python 2.7.9, e PYTHONPATH deve apontar para a pasta *lib* do SDK.
+
+ Com isso feito, é apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal (Para rodar no terminal é necessario utilizar o comando *python naoInteracao.py*).
  
- ## Pontos finais
-*Feito para a área de robótica da bolsa PIBEX da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).*
+## Pontos finais
+  *Feito para a área de robótica da bolsa PIBEX da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).*
