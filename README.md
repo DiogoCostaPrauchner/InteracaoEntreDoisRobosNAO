@@ -4,7 +4,7 @@
  
  Desenvolvido usando Choregraphe para criar arquivos *behavior* (.xar) que serão instalados dentro dos robôs, e a edição comunitária de PyCharm para o desenvolvimento do script.
 
-## Como utilizar
+## Como utilizar 🔧
 
  Primeiramente, é necessário instalar Python 2.7.9, pois é a versão que a API NAOqi utiliza.
  
@@ -18,5 +18,5 @@
 
  Com isso feito, é apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal (Para rodar no terminal é necessario utilizar o comando *python naoInteracao.py*).
  
-## Pontos finais
+## Pontos finais 🌟
   *Feito para a área de robótica da bolsa PIBEX da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).*
