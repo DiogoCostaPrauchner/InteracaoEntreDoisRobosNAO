@@ -4,6 +4,8 @@
 #Comentário
 #Código
 
+#Versão inicial feita por Diogo Costa Prauchner
+
 import time
 from naoqi import ALProxy
 
