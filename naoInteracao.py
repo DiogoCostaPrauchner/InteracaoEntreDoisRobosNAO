@@ -9,19 +9,19 @@
 import time
 from naoqi import ALProxy
 
-RA_IP = "192.168.0.125" #IP Do robô A
-RB_IP = "192.168.0.152" #IP Do robô B
-PORT = 9559             #Porta utilizada pelos dois robôs
+RA_IP = "192.168.0.125"  #IP Do robô A
+RB_IP = "192.168.0.152"  #IP Do robô B
+PORT = 9559              #Porta utilizada pelos dois robôs
 
 #Mensagens utilizadas pelos robôs nas conversas
 mensagemsRA = ["Eu sou o Robô 1!", "Como você está hoje, Robô 2?", "Eu também! Ótimo dia hoje, não é mesmo?",
-               "Sejam Bem-Vindos...", "frase 11"]
+               "Sejam Bem-Vindos...", "frase 11", "frase 13"]
 mensagemsRB = ["E eu sou o Robô 2!", "Eu estou ótimo, e você, Robô 1?", "Sim! O sol está lindo!",
-              "Ao Espaço Mais Inovação...", "frase 12"]
+              "Ao Espaço Mais Inovação...", "frase 12", "frase 14"]
 
-#Apenas números para testar mais rapidamente a sequencia da conversa
-#mensagemsRA = ["1", "3", "5", "7", "11"]
-#mensagemsRB = ["2", "4", "6", "8", "12"]
+#Apenas números para testar mais rapidamente a sequência da conversa
+#mensagemsRA = ["1", "3", "5", "7", "11", "13"]
+#mensagemsRB = ["2", "4", "6", "8", "12", "14"]
 
 #Inicialização dos contadores utilizados para a lógica de conversa
 cont1 = 0
@@ -52,7 +52,7 @@ def main():
     while True:
         try:
             global cont1, cont2, contEnd
-
+            #Lógica de conversa entre os robôs, fica em loop
             msg1 = mem_r1.getData("Robo1Fala")
             if msg1 is not None:
                 ttsA_r1.say(msg1, config)
@@ -77,12 +77,20 @@ def main():
             if contEnd == 8:
                 ttsA_r1.post.say("Da Unijuí!", config)
                 #Usar time.sleep() com um valor baixo pois post.say não está funcionando corretamente
+                #(0.05) Funciona bem, fica sincronizado sem um delay perceptível
                 time.sleep(0.05)
                 tts_r2.post.say("Da Unijuí!")
                 contEnd += 1
                 print("Valor de contEnd: " + str(contEnd))
 
-            if contEnd == 11:
+            if contEnd == 13:
+                ttsA_r1.post.say("Sincronia 1", config)
+                time.sleep(0.05)
+                tts_r2.post.say("Sincronia 2")
+                contEnd += 1
+                print("Valor de contEnd: " + str(contEnd))
+
+            if contEnd == 14:
                 print("Conversa encerrada!")
                 break
 
