@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-#Formato:
-#Comentário
-#Código
-
 #Versão inicial feita por Diogo Costa Prauchner
 
 import time
@@ -28,6 +24,9 @@ cont1 = 0
 cont2 = 0
 contEnd = 0
 
+#Váriavel utilizada para fala sincronizada com time.sleep()
+tempo = 0.05 # (0.05) Funciona bem, fica sincronizado sem um delay tão perceptível
+
 #Proxy para módulo de fala animada
 ttsA_r1 = ALProxy("ALAnimatedSpeech", RA_IP, PORT)
 #ttsA_r2 = ALProxy("ALAnimatedSpeech", RB_IP, PORT)
@@ -43,6 +42,9 @@ tts_r2 = ALProxy("ALTextToSpeech", RB_IP, PORT)
 mem_r1 = ALProxy("ALMemory", RA_IP, PORT)
 mem_r2 = ALProxy("ALMemory", RB_IP, PORT)
 
+anim_r1 = ALProxy("ALBehaviorManager", RA_IP, PORT)
+anim_r2 = ALProxy("ALBehaviorManager", RB_IP, PORT)
+
 #Inicialização para garantir que o código funciona
 mem_r1.insertData("Robo1Fala", "Eu sou o robô 1!")
 mem_r2.insertData("Robo2Fala", "E eu sou o robô 2!")
@@ -51,7 +53,7 @@ def main():
     contEnd = 0
     while True:
         try:
-            global cont1, cont2, contEnd
+            global cont1, cont2, contEnd, tempo
             #Lógica de conversa entre os robôs, fica em loop
             msg1 = mem_r1.getData("Robo1Fala")
             if msg1 is not None:
@@ -73,19 +75,41 @@ def main():
 
             #A partir dessa parte usar apenas contEnd para definir quando os robôs vão falar juntos
             #ou quando que vai terminar a conversa
+
             #Frases 9, 10
             if contEnd == 8:
                 ttsA_r1.post.say("Da Unijuí!", config)
-                #Usar time.sleep() com um valor baixo pois post.say não está funcionando corretamente
-                #(0.05) Funciona bem, fica sincronizado sem um delay perceptível
-                time.sleep(0.05)
+                #Usar time.sleep() pois post.say não está funcionando corretamente
+                time.sleep(tempo)
                 tts_r2.post.say("Da Unijuí!")
                 contEnd += 1
                 print("Valor de contEnd: " + str(contEnd))
 
+            #if contEnd == 9:
+            #    if (not anim_r1.isBehaviorRunning("testedanca2/behavior_1") and not
+            #            anim_r2.isBehaviorRunning("testedanca/behavior_1")):
+            #
+            #        anim_r1.runBehavior("testedanca2/behavior_1")
+            #        anim_r2.runBehavior("testedanca/behavior_1")
+            #
+            #        while (anim_r1.isBehaviorRunning("testedanca2/behavior_1") or
+            #               anim_r2.isBehaviorRunning("testedanca/behavior_1")):
+            #            time.sleep(0.5)
+            #
+            #        if anim_r1.isBehaviorRunning("testedanca2/behavior_1"):
+            #            anim_r1.stopBehavior("testedanca2/behavior_1")
+            #            print("Behavior no robô 1 foi encerrado")
+            #        else:
+            #            print("Behavior já foi encerrado no robô 1")
+            #        if anim_r2.isBehaviorRunning("testedanca/behavior_1"):
+            #            anim_r2.stopBehavior("testedanca/behavior_1")
+            #            print("Behavior no robô 2 foi encerrado")
+            #        else:
+            #            print("Behavior já foi encerrado no robô 2")
+
             if contEnd == 13:
                 ttsA_r1.post.say("Sincronia 1", config)
-                time.sleep(0.05)
+                time.sleep(tempo)
                 tts_r2.post.say("Sincronia 2")
                 contEnd += 1
                 print("Valor de contEnd: " + str(contEnd))
