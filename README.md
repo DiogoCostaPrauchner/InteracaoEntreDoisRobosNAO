@@ -1,8 +1,8 @@
 ## Interação Entre Dois Robôs NAO 🤖
 
- Este repositório servirá para armazenar apresentações que seram importadas futuramente e, além disso, um script Python, que utiliza da API NAOqi e o SDK para Python, para realizar a interação entre dois robôs NAO.
+ Este repositório servirá para armazenar apresentações que seram importadas para os robôs e, além disso, um script Python, que utiliza da API NAOqi e o SDK para Python, para realizar a interação entre dois robôs NAO.
  
- Choregraphe foi utilizado para criar arquivos *behavior* (.xar) que serão instalados dentro dos robôs, e a edição comunitária de PyCharm para o desenvolvimento do script.
+ Choregraphe foi utilizado para criar arquivos *behavior* (.xar) que serão instalados nos robôs, e a edição comunitária de PyCharm para o desenvolvimento do script.
 
 ## Como utilizar 🔧
 
@@ -19,4 +19,5 @@
  Com isso feito, é apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal (Para rodar no terminal é necessario utilizar o comando *python naoInteracao.py*).
  
 ## Pontos finais 🌟
+
   *Feito para a área de robótica da bolsa PIBEX da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).*
