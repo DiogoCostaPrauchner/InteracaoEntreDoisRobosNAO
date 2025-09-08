@@ -4,7 +4,7 @@
  
  Choregraphe foi utilizado para criar arquivos *behavior* (.xar) que serão instalados nos robôs, e a edição comunitária de PyCharm para o desenvolvimento do script.
 
-# Como utilizar 🔧
+# Como utilizar 💻
 
  É apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal (Para rodar no terminal é necessario utilizar o comando *python naoInteracao.py*).
  
@@ -20,7 +20,7 @@
 
  *Path* deve apontar para a pasta do Python 2.7.9, e *PYTHONPATH* deve apontar para a pasta *lib* do SDK.
  
-# Pontos finais 🌟
+# Considerações finais 🌟
 
  Vale lembrar que existe um SDK para Python 3 chamado **libqi**, mas ao considerar que para utilizar esta versão é necessário instalar pacotes dentro dos robôs, a versão antiga foi escolhida pela sua facilidade de manutenção.
 
