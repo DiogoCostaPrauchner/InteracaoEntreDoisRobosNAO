@@ -7,6 +7,7 @@
 # Como utilizar 🔧
 
  É apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal (Para rodar no terminal é necessario utilizar o comando *python naoInteracao.py*).
+ 
  Ressaltando que o local onde está o script deve ser acessado pelo terminal, ou pelo comando *cd*, ou por ir até a pasta onde está o script, e abrir um terminal na pasta.
 
 # Manutenção do script 🪛
