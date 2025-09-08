@@ -7,6 +7,7 @@
 # Como utilizar 🔧
 
  É apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal (Para rodar no terminal é necessario utilizar o comando *python naoInteracao.py*).
+ Ressaltando que o local onde está o script deve ser acessado pelo terminal, ou pelo comando *cd*, ou por ir até a pasta onde está o script, e abrir um terminal na pasta.
 
 # Manutenção do script 🪛
 
@@ -15,8 +16,6 @@
  Além disso, também é necessário instalar o SDK Python do site oficial da Aldebaran, o projeto foi desenvolvido utilizando a SDK 2.8.6 para Windows.
 
  Após ter descompactado a pasta do SDK Python no disco **C:**, é necessário configurar as váriaveis de ambiente Path e PYTHONPATH na máquina onde será executado o script.
-
- Para configurar as váriaveis de ambiente, é apenas pesquisar *Váriaveis de ambiente* após apertar o botão do Windows no teclado e clicar no programa com o mesmo nome.
 
  *Path* deve apontar para a pasta do Python 2.7.9, e *PYTHONPATH* deve apontar para a pasta *lib* do SDK.
  
