@@ -22,6 +22,6 @@
  
 # Pontos finais 🌟
 
- Vale lembrar que existe um SDK para Python 3 chamado **libqi**, mas ao considerar que para utilizar esta versão é necessário instalar pacotes dentro dos robôs, a versão antiga foi escolhida pela sua facilidade de manutenção
+ Vale lembrar que existe um SDK para Python 3 chamado **libqi**, mas ao considerar que para utilizar esta versão é necessário instalar pacotes dentro dos robôs, a versão antiga foi escolhida pela sua facilidade de manutenção.
 
 ### *Feito para a área de robótica da bolsa PIBEX da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).*
