@@ -6,9 +6,7 @@
 
 # Como utilizar 💻
 
- É apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal.
- 
- Ressaltando que o local onde está o script deve ser acessado pelo terminal, ou pelo comando *cd*, ou por ir até a pasta onde está o script, e abrir um terminal na pasta.
+ É apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal, os arquivos *Behavior* (.xar) necessários já estão instalados dentro dos robôs.
 
 # Manutenção do script 🪛
 
@@ -23,5 +21,9 @@
 # Considerações finais 🌟
 
  Vale lembrar que existe um SDK para Python 3 chamado **libqi**, mas ao considerar que para utilizar esta versão é necessário instalar pacotes dentro dos robôs, a versão antiga foi escolhida pela sua facilidade de manutenção.
+
+ [Link para o download do SDK Python](https://aldebaran.com/en/support/kb/nao6/downloads/nao6-software-downloads/)
+
+ [Link para o download do Python versão 2.7.9](https://www.python.org/downloads/release/python-279/)
 
 ### *Feito para a área de robótica da bolsa PIBEX da Universidade Regional do Noroeste do Estado do Rio Grande do Sul (UNIJUÍ).*
