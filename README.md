@@ -6,7 +6,9 @@
 
 # Como utilizar 💻
 
- É apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal, os arquivos *Behavior* (.xar) necessários já estão instalados dentro dos robôs.
+ É apenas rodar o script usando o seu método de preferência, como por exemplo, no terminal, após ter instalado Python 2.7.9.
+ 
+ Os arquivos *Behavior* (.xar) necessários já estão instalados dentro dos robôs.
 
 # Manutenção do script 🪛
 
